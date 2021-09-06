@@ -1,8 +1,9 @@
 import React from 'react'
+import './Header.css'
 
 function Header(){
     return(
-        <div>
+        <div className='headerFlex'>
         <h1>Título/ Nombre de la app</h1>
         <div>
             <p>Ordenar ASC/ DESC</p>
