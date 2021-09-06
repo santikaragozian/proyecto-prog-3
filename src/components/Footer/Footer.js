@@ -15,4 +15,3 @@ function Footer(){
 
 export default Footer
 
-//hola como estas
