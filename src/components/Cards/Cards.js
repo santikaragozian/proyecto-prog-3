@@ -1,11 +1,12 @@
 import React from 'react'
+import './Cards.css'
 
 function Cards(){
     return(
         <main>
             <button type="button">Cargar más tarjetas</button>
             <section class="card-container">
-                <article>
+                <article className='cardContainer'>
                     <section class="navigation">
                         <div>
                             <i class="fas fa-chevron-left"></i>

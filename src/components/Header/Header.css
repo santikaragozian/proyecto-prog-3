@@ -1,4 +1,8 @@
 .headerFlex{
+    margin-bottom: 100px;
     display: flex;
-    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 }
