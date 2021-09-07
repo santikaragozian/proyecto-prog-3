@@ -1,7 +1,6 @@
-.cardContainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+
+
+.eachCard{
+    height: 300px;
+    width: 300px;
 }

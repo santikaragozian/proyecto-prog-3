@@ -12,7 +12,9 @@ function App() {
         <Header />
       </div>
         
-      <div>
+      
+      <button type="button">Cargar más tarjetas</button>
+      <div className="card-container">
         <Cards />
         <Cards />
         <Cards />
@@ -21,10 +23,8 @@ function App() {
         <Cards />
         <Cards />
         <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-      </div>
+       </div>
+      
 
       <div>
         <Footer />
