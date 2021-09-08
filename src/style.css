@@ -1,8 +1,8 @@
 div.card-container{
-    background-color: red;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: stretch;
+    justify-content: space-between;
     margin-bottom: 300px;
+    margin-top: 30px;
 }
