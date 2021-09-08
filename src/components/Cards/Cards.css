@@ -13,3 +13,22 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.verMas{
+    width: 17%;
+    color: blue;
+}
+
+.verMas:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.esconder{
+    display: none;
+}
+
+.mostrar{
+    display: block;
+}
+
