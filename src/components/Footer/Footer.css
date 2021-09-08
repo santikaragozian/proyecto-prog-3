@@ -1,0 +1,10 @@
+.team{
+    display: flex;
+    flex-direction: row-reverse;
+    list-style-type: none;
+    background-color: rgb(221, 219, 219);
+}
+
+.integrantesTeam{
+    margin: 10px;
+}

@@ -4,21 +4,21 @@ import './Cards.css'
 function Cards(){
     return(
                 <article className='eachCard'>
-                    <section class="navigation">
+                    <section className="navigation">
                         <div>
-                            <i class="fas fa-chevron-left"></i>
-                            <i class="fas fa-chevron-right"></i>
+                            <i className="fas fa-chevron-left"></i>
+                            <i className="fas fa-chevron-right"></i>
                         </div>
-                        <i class="far fa-window-close"></i>
+                        <i className="far fa-window-close"></i>
                     </section>
                     <div>
-                        <img src="./img/image-default.png" alt="" />
+                        <img src="./assets/img/image-default.png" alt="" />
                         <h3>Título/ Nombre</h3>
-                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
+                        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
                         <section class="aditional-info">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                            <p>info adicional 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                            <p>info adicional 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                            <p>info adicional 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
                         </section>
                         <p>Ver más</p>
                     </div>

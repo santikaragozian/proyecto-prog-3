@@ -5,7 +5,7 @@ function Header(){
     return(
         <div className='headerFlex'>
         <h1>Título/ Nombre de la app</h1>
-        <div>
+        <div className='headerDerecha'>
             <p>Ordenar ASC/ DESC</p>
             <i class="fas fa-th"></i>
             <i class="fas fa-align-justify"></i>
