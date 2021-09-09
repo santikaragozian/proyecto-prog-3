@@ -1,9 +1,10 @@
 import React from 'react'
+import './Footer.css'
 
 
 function Footer(){
     return(
-    <footer  >
+    <footer className= 'footerFlex' >
         <ul class="team">
             <li>Nombre integrante 1</li>
             <li>Nombre integrante 2</li>
