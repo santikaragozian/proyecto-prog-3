@@ -7,7 +7,6 @@ class Cards extends Component{
         this.state = {
             viewMore: false,
             text:'Ver más',
-            selected: false,
         }
     }
 
@@ -20,20 +19,8 @@ class Cards extends Component{
         } else {
             this.setState({
                 viewMore: true,
-                text: 'ver menos'
+                text: 'Ver menos'
             })            
-        }
-    }
-
-    selected(){
-        if(this.state.selected){
-            this.setState({
-                selected: false,
-            })
-        } else {
-            this.setState({
-                selected: true,
-            })
         }
     }
 
@@ -52,11 +39,11 @@ class Cards extends Component{
                             <h3>Título/ Nombre</h3>
                             <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
                             <section class="aditional-info">
-                                <p className={`${this.state.viewMore ? 'mostrar' : 'esconder'}`}>info adicional 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                                {/* <p className={`${this.state.viewMore ? 'mostrar' : 'esconder'}`}>info adicional 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                                <p className={`${this.state.viewMore ? 'mostrar' : 'esconder'}`}>info adicional 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p> */}
+                                <p className={`extra ${this.state.viewMore ? 'mostrar' : 'esconder'}`}>info adicional 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                                <p className={`extra ${this.state.viewMore ? 'mostrar' : 'esconder'}`}>info adicional 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                                <p className={`extra ${this.state.viewMore ? 'mostrar' : 'esconder'}`}>info adicional 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
                             </section>
-                            <p className="verMas" onClick={()=>this.viewMore}>{this.state.text}</p>
+                            <p className="verMas" onClick={()=>this.viewMore()}>{this.state.text}</p>
                         </div>
                     </article>
                 
