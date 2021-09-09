@@ -5,6 +5,17 @@ import './style.css'
 class Main extends Component{
     constructor(){
         super()
+        this.state = {
+            tarjetas: [],
+            isLoaded: false
+        }
+    }
+
+    deleteCard(tarjetaABorrar){
+        let tarjetasQueQuedan = this.state.tarjetas.filter(tarjeta=>tarjeta.id !== tarjetaABorrar)
+        this.setState({
+            tarjetas: tarjetasQueQuedan
+        })
     }
 
     render(){

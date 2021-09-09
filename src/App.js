@@ -15,7 +15,7 @@ function App() {
         
 
       <div>
-         <Main />
+        <Main />
       </div> 
       
     
