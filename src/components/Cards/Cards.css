@@ -1,0 +1,34 @@
+.eachCard{
+    width: 24%;
+    border-style: solid;
+    margin-bottom: 20px;
+}
+
+.eachCard img{
+    width: 100%;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.verMas{
+    width: 17%;
+    color: blue;
+}
+
+.verMas:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.esconder{
+    display: none;
+}
+
+.mostrar{
+    display: block;
+}
+
