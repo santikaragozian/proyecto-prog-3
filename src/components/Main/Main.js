@@ -23,7 +23,7 @@ class Main extends Component{
             this.setState({
                 movie: [1,2,3],
                 isLoaded: true,
-                nextUrl:  data.info.next
+                //nextUrl:  data.info.next
             }, ()=>console.log(this.state.movie))
         })
         .catch( error => console.error())
