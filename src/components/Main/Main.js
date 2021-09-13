@@ -46,8 +46,13 @@ class Main extends Component{
             <Header />
             <button type="button">Cargar más tarjetas</button>
             <div className="card-container">
-                <p>sdfgdbdfg</p>
-                {this.state.movie.map((movie, idx)=> <p> sdfsdfsf</p>)}
+
+                {
+                    this.state.isLoaded === false ?
+                    <p> Loading... </p> :
+                    this.state.movie.map((movie, idx) => <p> sdfsdfsf</p>)
+                }
+                
             </div>
             </React.Fragment>
             
