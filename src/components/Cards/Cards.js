@@ -38,6 +38,7 @@ class Cards extends Component{
     }
 
     render(){
+        console.log('me renderice')
         return(
                     <article className='eachCard'>
                         <section className="navigation">
