@@ -39,10 +39,10 @@ class Cards extends Component{
                 </section>
                 <div>
                     <img src="./assets/img/image-default.png" alt="" />
-                    <h3>Título/ Nombre</h3>
-                    <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
+                    <h3>{this.props.dataMovie.name}</h3>
+                    <p className="description">{this.props.dataMovie.overview}</p>
                     <section class="aditional-info">
-                        <p className={`extra ${this.state.viewMore ? 'mostrar' : 'esconder'}`}>Fecha de estreno: </p>
+                        <p className={`extra ${this.state.viewMore ? 'mostrar' : 'esconder'}`}>Fecha de estreno: {this.props.dataMovie.release_date}</p>
                     </section>
                     <p className="verMas" onClick={()=>this.viewMore()}>{this.state.text}</p>
                 </div>

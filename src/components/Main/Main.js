@@ -7,7 +7,7 @@ class Main extends Component{
     constructor(){
         super()
         this.state = {
-            tarjetas: [],
+            movie: [],
             isLoaded: false,
             datos: ''
         }
@@ -45,16 +45,10 @@ class Main extends Component{
             <Header />
             <button type="button">Cargar más tarjetas</button>
             <div className="card-container">
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
+                {this.state.movie.map((movie, idx)=> <Cards key={movie.name + idx} dataMovie={movie} />)}
             </div>
             </React.Fragment>
+            
         )
     }
 }
