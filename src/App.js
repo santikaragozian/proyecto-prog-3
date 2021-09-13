@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from './components/Header/Header'
-import Cards from './components/Cards/Cards';
+import Main from './components/Main/Main'
 import Footer from './components/Footer/Footer'
-import './style.css'
+
 
 
 function App() {
@@ -13,20 +13,12 @@ function App() {
         <Header />
       </div>
         
-      
-      <button type="button">Cargar más tarjetas</button>
-      <div className="card-container">
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-       </div>
-      
 
+      <div>
+        <Main />
+      </div> 
+      
+    
       <div>
         <Footer />
       </div>

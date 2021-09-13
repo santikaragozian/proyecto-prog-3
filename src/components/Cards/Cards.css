@@ -2,10 +2,15 @@
     width: 24%;
     border-style: solid;
     margin-bottom: 20px;
+    background: white;
 }
 
 .eachCard img{
     width: 100%;
+}
+
+.eachCard:hover{
+    box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
 }
 
 .navigation{
@@ -15,7 +20,7 @@
 }
 
 .verMas{
-    width: 17%;
+    width: 22%;
     color: blue;
 }
 
