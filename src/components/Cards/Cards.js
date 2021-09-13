@@ -24,6 +24,8 @@ class Cards extends Component{
         }
     }
 
+    
+
     render(){
         console.log('me renderice')
         return(

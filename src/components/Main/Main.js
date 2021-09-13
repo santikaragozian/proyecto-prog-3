@@ -11,6 +11,8 @@ class Main extends Component{
         }
     }
 
+    
+
     deleteCard(tarjetaABorrar){
         let tarjetasQueQuedan = this.state.tarjetas.filter(tarjeta=>tarjeta.id !== tarjetaABorrar)
         this.setState({
