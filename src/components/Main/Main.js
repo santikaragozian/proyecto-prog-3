@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Cards from '../Cards/Cards'
+import Header from '../Header/Header'
 import './style.css'
 
 class Main extends Component{
@@ -23,6 +24,7 @@ class Main extends Component{
     render(){
         return(
             <React.Fragment>
+            <Header />
             <button type="button">Cargar más tarjetas</button>
             <div className="card-container">
                 <Cards />
