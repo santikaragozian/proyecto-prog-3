@@ -4,8 +4,8 @@ import Header from '../Header/Header'
 import './style.css'
 
 class Main extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             movie: [],
             isLoaded: false,
@@ -21,10 +21,10 @@ class Main extends Component{
         .then(data => { 
             console.log(data);
             this.setState({
-                movie: data.results,
+                movie: [1,2,3],
                 isLoaded: true,
                 nextUrl:  data.info.next
-            })
+            }, ()=>console.log(this.state.movie))
         })
         .catch( error => console.error())
     }
@@ -40,12 +40,14 @@ class Main extends Component{
     }
 
     render(){
+        console.log(this.state.movie);
         return(
             <React.Fragment>
             <Header />
             <button type="button">Cargar más tarjetas</button>
             <div className="card-container">
-                {this.state.movie.map((movie, idx)=> <Cards key={movie.name + idx} dataMovie={movie} />)}
+                <p>sdfgdbdfg</p>
+                {this.state.movie.map((movie, idx)=> <p> sdfsdfsf</p>)}
             </div>
             </React.Fragment>
             

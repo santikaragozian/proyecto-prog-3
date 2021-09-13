@@ -27,7 +27,8 @@ class Cards extends Component{
     
 
     render(){
-        console.log('me renderice')
+        console.log(this.props);
+        console.log('++++++++++++++++++++')
         return(
             <article className='eachCard'>
                 <section className="navigation">
