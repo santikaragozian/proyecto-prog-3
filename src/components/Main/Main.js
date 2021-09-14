@@ -21,9 +21,9 @@ class Main extends Component{
         .then(data => { 
             console.log(data);
             this.setState({
-                movie: [1,2,3],
+                movie: data.results,
                 isLoaded: true,
-                nextUrl:  data.info.next
+                //nextUrl:  data.info.next
             }, ()=>console.log(this.state.movie))
         })
         .catch( error => console.error())
@@ -33,14 +33,14 @@ class Main extends Component{
     
 
     deleteCard(tarjetaABorrar){
-        let tarjetasQueQuedan = this.state.tarjetas.filter(tarjeta=>tarjeta.id !== tarjetaABorrar)
+        let tarjetasQueQuedan = this.state.move.filter(movie=>movie.id !== tarjetaABorrar)
         this.setState({
             tarjetas: tarjetasQueQuedan
         })
     }
 
     render(){
-        console.log(this.state.movie);
+        //console.log(this.state.movie);
         return(
             <React.Fragment>
             <Header />
@@ -50,7 +50,7 @@ class Main extends Component{
                 {
                     this.state.isLoaded === false ?
                     <p> Loading... </p> :
-                    this.state.movie.map((movie, idx) => <p> sdfsdfsf</p>)
+                    this.state.movie.map((movie, idx) => <Cards key={movie.name + idx} dataMovie={movie} remove={(tarjetaABorrar)=>this.deleteCard(tarjetaABorrar)}/>)
                 }
                 
             </div>
