@@ -27,8 +27,6 @@ class Cards extends Component{
     
 
     render(){
-        console.log(this.props);
-        console.log('++++++++++++++++++++')
         return(
             <article className='eachCard'>
                 <section className="navigation">
@@ -36,12 +34,13 @@ class Cards extends Component{
                         <i className="fas fa-chevron-left"></i>
                         <i className="fas fa-chevron-right"></i>
                     </div>
-                    <i className="far fa-window-close"></i>
+                    <i className="far fa-window-close"  onClick={()=>this.props.remove(this.props.dataPersonaje.id)}></i>
                 </section>
                 <div>
-                    <img src="./assets/img/image-default.png" alt="" />
-                    <h3>{this.props.dataMovie.name}</h3>
-                    <p className="description">{this.props.dataMovie.overview}</p>
+                    <img src={'https://image.tmdb.org/t/p/original' + this.props.dataMovie.poster_path} alt="" />
+                    <h3>{this.props.dataMovie.title}</h3>
+                    <p className={`extra ${this.state.viewMore ? 'mostrar' : 'esconder'}`}>{this.props.dataMovie.overview}</p>
+            
                     <section class="aditional-info">
                         <p className={`extra ${this.state.viewMore ? 'mostrar' : 'esconder'}`}>Fecha de estreno: {this.props.dataMovie.release_date}</p>
                     </section>
