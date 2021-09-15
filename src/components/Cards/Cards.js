@@ -25,7 +25,7 @@ class Cards extends Component{
     }
 
     
-
+    
     render(){
         return(
             <article className='eachCard'>
@@ -34,7 +34,8 @@ class Cards extends Component{
                         <i className="fas fa-chevron-left"></i>
                         <i className="fas fa-chevron-right"></i>
                     </div>
-                    <i className="far fa-window-close"  onClick={()=>this.props.remove(this.props.dataPersonaje.id)}></i>
+                    
+                    <i className="far fa-window-close" onClick={()=>this.props.remove(this.props.dataMovie.id)}></i>
                 </section>
                 <div>
                     <img src={'https://image.tmdb.org/t/p/original' + this.props.dataMovie.poster_path} alt="" />

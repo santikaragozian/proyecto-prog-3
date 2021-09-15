@@ -32,10 +32,11 @@ class Main extends Component{
 
     
 
-    deleteCard(tarjetaABorrar){
-        let tarjetasQueQuedan = this.state.move.filter(movie=>movie.id !== tarjetaABorrar)
+    deleteCard(movieABorrar){
+        let moviesQueQuedan = this.state.movie.filter(movie => movie.id !== movieABorrar)
+
         this.setState({
-            tarjetas: tarjetasQueQuedan
+            movie: moviesQueQuedan
         })
     }
 
@@ -50,7 +51,7 @@ class Main extends Component{
                 {
                     this.state.isLoaded === false ?
                     <p> Loading... </p> :
-                    this.state.movie.map((movie, idx) => <Cards key={movie.name + idx} dataMovie={movie} remove={(tarjetaABorrar)=>this.deleteCard(tarjetaABorrar)}/>)
+                    this.state.movie.map((movie, idx) => <Cards key={movie.name + idx} dataMovie={movie} remove={(movieABorrar)=>this.deleteCard(movieABorrar)}/>)
                 }
                 
             </div>
