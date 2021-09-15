@@ -8,6 +8,7 @@ class Main extends Component{
         super(props)
         this.state = {
             movie: [],
+            moviesIniciales: [],
             isLoaded: false,
             datos: ''
         }
@@ -22,6 +23,7 @@ class Main extends Component{
             console.log(data);
             this.setState({
                 movie: data.results,
+                moviesIniciales: data.results,
                 isLoaded: true,
                 //nextUrl:  data.info.next
             }, ()=>console.log(this.state.movie))
@@ -40,11 +42,19 @@ class Main extends Component{
         })
     }
 
+    filtrarMovies(textoAFiltrar){
+        let moviesFiltradas = this.state.moviesIniciales.filter(movie => movie.name.toLowerCase().includes(textoAFiltrar.toLowerCase()))
+
+        this.setState({
+            movie: moviesFiltradas
+        })
+    }
+
     render(){
         //console.log(this.state.movie);
         return(
             <React.Fragment>
-            <Header />
+            <Header filtrarMovies={(textoAFiltrar)=>this.filtrarMovies(textoAFiltrar)} />
             <button type="button">Cargar más tarjetas</button>
             <div className="card-container">
 
