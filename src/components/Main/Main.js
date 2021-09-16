@@ -73,7 +73,6 @@ class Main extends Component{
         return(
             <React.Fragment>
             <Header filtrarMovies={(textoAFiltrar)=>this.filtrarMovies(textoAFiltrar)} />
-            <button type="button">Cargar más tarjetas</button>
             <div className="card-container">
 
                 {
