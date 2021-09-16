@@ -42,6 +42,7 @@ class Main extends Component{
         })
     }
 
+
     addMore(){
 
         let  url = 'https://api.themoviedb.org/3/movie/popular?api_key=decfa5bfc3151df1ce9acb9ac606d5c4&language=en-US&page=' + this.state.nextUrl;
@@ -65,6 +66,7 @@ class Main extends Component{
 
     filtrarMovies(textoAFiltrar){
         let moviesFiltradas = this.state.moviesIniciales.filter(movie => movie.name.toLowerCase().includes(textoAFiltrar.toLowerCase()))
+   
 
 
 
@@ -72,9 +74,7 @@ class Main extends Component{
         //console.log(this.state.movie);
         return(
             <React.Fragment>
-            <Header />
             <Header filtrarMovies={(textoAFiltrar)=>this.filtrarMovies(textoAFiltrar)} />
-            <button type="button">Cargar más tarjetas</button>
             <div className="card-container">
 
                 {
