@@ -38,7 +38,7 @@ class Header extends Component{
     render(){
         return(
             <div className='headerFlex'>
-            <h1>Título/ Nombre de la app</h1>
+            <h1>Cuevana 7</h1>
             <div className='headerDerecha'>
                 <p>Ordenar ASC/ DESC</p>
                 <i className="fas fa-th" onClick={()=>this.orientacionColumnas()} ></i>

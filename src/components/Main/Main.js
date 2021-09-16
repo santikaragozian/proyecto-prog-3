@@ -10,13 +10,15 @@ class Main extends Component{
             movie: [],
             moviesIniciales: [],
             isLoaded: false,
-            datos: ''
+            pagina: 1,
+            datos: '',
+            nextURl:''
         }
     }
 
     componentDidMount(){
         console.log('Funciona')
-        let  url = 'https://api.themoviedb.org/3/movie/popular?api_key=decfa5bfc3151df1ce9acb9ac606d5c4&language=en-US&page=1'
+        let  url = 'https://api.themoviedb.org/3/movie/popular?api_key=decfa5bfc3151df1ce9acb9ac606d5c4&language=en-US&page=' + this.state.pagina;
         fetch(url)
         .then(response => response.json())
         .then(data => { 
@@ -25,14 +27,12 @@ class Main extends Component{
                 movie: data.results,
                 moviesIniciales: data.results,
                 isLoaded: true,
-                //nextUrl:  data.info.next
+                nextUrl:  this.state.pagina +1
             }, ()=>console.log(this.state.movie))
         })
         .catch( error => console.error())
     }
 
-
-    
 
     deleteCard(movieABorrar){
         let moviesQueQuedan = this.state.moviesIniciales.filter(movie => movie.id !== movieABorrar)
@@ -50,6 +50,24 @@ class Main extends Component{
         })
     }
 
+    addMore(){
+
+        let  url = 'https://api.themoviedb.org/3/movie/popular?api_key=decfa5bfc3151df1ce9acb9ac606d5c4&language=en-US&page=' + this.state.nextUrl;
+        fetch(url)
+        .then(response => response.json())
+        .then(data => { 
+            console.log(data);
+            this.setState({
+                movie: this.state.movie.concat(data.results),
+                nextUrl:  this.state.nextUrl +1
+
+            })
+        })
+        .catch( error => console.error())
+
+    }
+
+
     render(){
         //console.log(this.state.movie);
         return(
@@ -65,6 +83,7 @@ class Main extends Component{
                 }
                 
             </div>
+            <button type="button" onClick={() => this.addMore()}>Cargar más tarjetas</button>
             </React.Fragment>
             
         )
