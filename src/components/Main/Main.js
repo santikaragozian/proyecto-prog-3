@@ -35,7 +35,7 @@ class Main extends Component{
     
 
     deleteCard(movieABorrar){
-        let moviesQueQuedan = this.state.movie.filter(movie => movie.id !== movieABorrar)
+        let moviesQueQuedan = this.state.moviesIniciales.filter(movie => movie.id !== movieABorrar)
 
         this.setState({
             movie: moviesQueQuedan
@@ -43,7 +43,7 @@ class Main extends Component{
     }
 
     filtrarMovies(textoAFiltrar){
-        let moviesFiltradas = this.state.moviesIniciales.filter(movie => movie.name.toLowerCase().includes(textoAFiltrar.toLowerCase()))
+        let moviesFiltradas = this.state.moviesIniciales.filter(movie => movie.title.toLowerCase().includes(textoAFiltrar.toLowerCase()))
 
         this.setState({
             movie: moviesFiltradas
@@ -61,7 +61,7 @@ class Main extends Component{
                 {
                     this.state.isLoaded === false ?
                     <p> Loading... </p> :
-                    this.state.movie.map((movie, idx) => <Cards key={movie.name + idx} dataMovie={movie} remove={(movieABorrar)=>this.deleteCard(movieABorrar)}/>)
+                    this.state.movie.map((movie, idx) => <Cards key={movie.title + idx} dataMovie={movie} remove={(movieABorrar)=>this.deleteCard(movieABorrar)}/>)
                 }
                 
             </div>
