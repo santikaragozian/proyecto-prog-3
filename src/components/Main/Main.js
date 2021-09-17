@@ -35,10 +35,11 @@ class Main extends Component{
 
 
     deleteCard(movieABorrar){
-        let moviesQueQuedan = this.state.moviesIniciales.filter(movie => movie.id !== movieABorrar)
+        let moviesQueQuedan = this.state.movie.filter(movie => movie.id !== movieABorrar)
 
         this.setState({
-            movie: moviesQueQuedan
+            movie: moviesQueQuedan,
+            moviesIniciales: moviesQueQuedan
         })
     }
 
