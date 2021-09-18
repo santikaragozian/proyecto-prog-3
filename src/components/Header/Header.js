@@ -6,7 +6,7 @@ class Header extends Component{
         super()
         this.state = {
             valor: '',
-            orientacionColumnas: false,
+           
         }
     }
 
@@ -21,18 +21,16 @@ class Header extends Component{
         )
     }
 
-    orientacionColumnas(){
-        if(this.state.orientacionColumnas){
-            this.setState({
-                orientacionColumnas: false, 
-                icon: <i className="fas fa-th"></i>
-            })
-        } else {
-            this.setState({
-                orientacionColumnas: true,
-                icon: <i className="fas fa-align-justify"></i>
-            })
-        }
+    cambioColumnas(){
+        this.setState({
+            filas: false
+        })
+    }
+
+    cambiarFilas(){
+        this.setState({
+            filas: true
+        })
     }
 
     render(){
@@ -41,8 +39,8 @@ class Header extends Component{
             <h1>Cuevana 7</h1>
             <div className='headerDerecha'>
                 <p>Ordenar ASC/ DESC</p>
-                <i className="fas fa-th" onClick={()=>this.orientacionColumnas()} ></i>
-                <i className="fas fa-align-justify" onClick={()=>this.orientacionColumnas()} ></i>
+                <i className="fas fa-th" onClick={()=>this.cambiarFilas()} ></i>
+                <i className="fas fa-align-justify" onClick={()=>this.cambioColumnas()} ></i>
                 <form action="" onSubmit={(event)=>this.evitarSubmit(event)}>
                     <input type="text" onChange={(event)=>this.controlarCambios(event)} value={this.state.valor} placeholder="Search" /> 
                     <button type="submit"><i className="fas fa-search"></i></button>

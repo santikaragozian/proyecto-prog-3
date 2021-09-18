@@ -12,7 +12,8 @@ class Main extends Component{
             isLoaded: false,
             pagina: 1,
             datos: '',
-            nextURl:''
+            nextURl:'' ,
+            filas: true,
         }
     }
 
@@ -68,13 +69,27 @@ class Main extends Component{
 
     }
 
+    cambioColumnas(){
+        this.setState({
+            filas: false
+        })
+    }
+
+    cambiarFilas(){
+        this.setState({
+            filas: true
+        })
+    }
+
 
     render(){
         //console.log(this.state.movie);
         return(
             <React.Fragment>
             <Header filtrarMovies={(textoAFiltrar)=>this.filtrarMovies(textoAFiltrar)} />
-            <div className="card-container">
+            <i className="fas fa-th" onClick={()=>this.cambiarFilas()} ></i>
+            <i className="fas fa-align-justify" onClick={()=>this.cambioColumnas()} ></i>
+            <div className={this.state.filas ? 'filas' : 'columnas'}>
 
                 {
                     this.state.isLoaded === false ?

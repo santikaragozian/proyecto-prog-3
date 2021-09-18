@@ -1,4 +1,4 @@
-div.card-container{
+.filas{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -6,4 +6,9 @@ div.card-container{
     align-items: flex-start;
     padding-bottom: 30px;
     padding-top: 30px;
+}
+
+.columnas{
+    display: flex;
+    flex-direction: column;
 }
