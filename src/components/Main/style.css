@@ -10,5 +10,13 @@
 
 .columnas{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
+    width: 100%
+
 }
+
+.eachCard{
+    align-items:flex-end
+};
