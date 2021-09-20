@@ -41,6 +41,7 @@ class Cards extends Component{
                     <img src={'https://image.tmdb.org/t/p/original' + this.props.dataMovie.poster_path} alt="" />
                     <h3>{this.props.dataMovie.title}</h3>
                     <p className={`extra ${this.state.viewMore ? 'mostrar' : 'esconder'}`}>{this.props.dataMovie.overview}</p>
+                    <p className={`extra ${this.state.viewMore ? 'mostrar' : 'esconder'}`}>Rating: {this.props.dataMovie.vote_average}</p>
             
                     <section class="aditional-info">
                         <p className={`extra ${this.state.viewMore ? 'mostrar' : 'esconder'}`}>Fecha de estreno: {this.props.dataMovie.release_date}</p>
